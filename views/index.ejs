@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+        <title>Wszystkie przepisy</title>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light " style="background-color: #e3f2fd;" >
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                      </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+<div class="container">
+     
+<header class="jumbotron">
+<div class="container">
+<h1>Wszystkie przepisy</h1>
+<p><a class="btn btn-primary btn-large" href="/index/new">Dodaj nowy przepis</a></p>
+</div>
+</header>
+
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+        <% recipes.forEach(function(recipes){ %>
+            <div class="col">
+                <div class="col">     
+               <div class="card ">
+                
+                    <img src="<%= recipes.image %>" class="card-img-top" >  
+                    <div class="card-body">
+                        <h5 class="card-title"><%= recipes.name %></h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                       <p>
+                         <a href="/index/<%= recipes._id %>" class="btn btn-primary">Zobacz przepis</a>
+                       </p>
+                    
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+</div>
+
+
+        <p>Programowanie internetowe Michał Lachowski</p>
+    </div>
+    </body>
+    </html>   
